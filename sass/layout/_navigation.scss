@@ -1,0 +1,30 @@
+.header__navbar {
+  .header__list {
+    @include flex;
+    gap: 3.3rem;
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+    li {
+      a:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+  @include responsive(tablet) {
+    display: none;
+  }
+}
+.navbar {
+  display: none;
+  padding: 25px 0;
+  .header__list {
+    @include flex;
+    justify-content: center;
+    gap: 3.3rem;
+  }
+
+  @include responsive(tablet) {
+    display: block;
+  }
+}

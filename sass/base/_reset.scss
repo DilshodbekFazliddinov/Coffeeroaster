@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  color: $color-secondary;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: $barlow;
+  background-color: $bg-color;
+}
+.container {
+  width: 100%;
+  max-width: 1380px;
+  padding: 0 50px;
+  margin: 0 auto;
+  @include responsive(tablet) {
+    padding: 0 30px;
+  }
+  @include responsive(m-phone) {
+    padding: 0 25px;
+  }
+  @include responsive(phone) {
+    padding: 0 20px;
+  }
+}
+main {
+  flex-grow: 1;
+}

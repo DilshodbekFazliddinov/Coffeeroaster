@@ -1,0 +1,45 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// responsive
+
+@mixin responsive($breakpoints) {
+  @if $breakpoints == desktop {
+    @media screen and (max-width: 1205px) {
+      @content;
+    }
+  }
+  @if $breakpoints == m-desktop {
+    @media screen and (max-width: 1010px) {
+      @content;
+    }
+  }
+  @if $breakpoints == m-tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoints == tablet {
+    @media screen and (max-width: 650px) {
+      @content;
+    }
+  }
+  @if $breakpoints == m-phone {
+    @media screen and (max-width: 550px) {
+      @content;
+    }
+  }
+  @if $breakpoints == phone {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
+}

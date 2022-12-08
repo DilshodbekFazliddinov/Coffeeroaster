@@ -1,0 +1,20 @@
+.hidden {
+  @include responsive(tablet) {
+    display: none;
+  }
+}
+.category-hidden {
+  display: none;
+}
+.category-hidden2 {
+  display: none;
+}
+.category-hidden3 {
+  display: none;
+}
+.category-hidden4 {
+  display: none;
+}
+.category-hidden5 {
+  display: none;
+}

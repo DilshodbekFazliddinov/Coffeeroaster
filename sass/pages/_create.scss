@@ -1,0 +1,139 @@
+.create-bg {
+  @include bgimg;
+  background-image: url(../images/jpg/createbg.png);
+}
+.create-work {
+  @include bgimg;
+  background-image: url(../images/png/choosebg.png);
+  padding-top: 12.8rem;
+  padding-bottom: 10rem;
+  border-radius: 1rem;
+  h3,
+  p {
+    color: $color-light;
+  }
+}
+.categorys {
+  margin-bottom: 8.4rem;
+  &__container {
+    @include flex;
+    padding: 0 6.5rem;
+    align-items: flex-start;
+    @include responsive(desktop) {
+      justify-content: center;
+    }
+    @include responsive(tablet) {
+      padding: 0;
+    }
+  }
+  &__type {
+    .type-list {
+      @include flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.4rem;
+      li {
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid $color-grey;
+        width: 25.5rem;
+        a {
+          @include flex;
+          justify-content: start;
+          gap: 2.4rem;
+          color: $color-grey;
+          font-size: 2.4rem;
+          font-family: $fraunces;
+          text-transform: capitalize;
+          &:hover {
+            color: $color-secondary;
+          }
+          & span:nth-child(1) {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    @include responsive(desktop) {
+      display: none;
+    }
+  }
+  .wrapper__cards {
+    text-align: end;
+    @include responsive(desktop) {
+      text-align: center;
+    }
+    .box-card:not(:last-child) {
+      margin-bottom: 8.8rem;
+    }
+    h2 {
+      color: $color-grey;
+      @include responsive(m-tablet) {
+        font-size: 3.2rem;
+      }
+    }
+    .box-title {
+      @include flex;
+      gap: 8rem;
+      margin-bottom: 5.6rem;
+      @include responsive(m-tablet) {
+        margin-bottom: 4rem;
+        gap: 4rem;
+        align-items: flex-start;
+      }
+    }
+    .order {
+      width: 73rem;
+      padding: 2.7rem 6.4rem;
+      border-radius: 1rem;
+      margin-bottom: 4rem;
+      p {
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      h4 {
+        color: $color-light;
+      }
+      @include bgimg;
+      background-image: url(../images/png/choosebg.png);
+      span {
+        color: $color-primary;
+      }
+      @include responsive(m-tablet) {
+        width: 50rem;
+        padding: 2.3rem 5rem;
+      }
+      @include responsive(m-phone) {
+        width: 100%;
+      }
+    }
+  }
+  &__cards {
+    @include flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.3rem;
+    @include responsive(m-tablet) {
+      flex-wrap: wrap;
+    }
+  }
+  &__cards-box {
+    width: 22.8rem;
+    padding: 3.2rem 2.8rem 8.4rem;
+    background-color: #f4f1eb;
+    border-radius: 8px;
+    text-align: center;
+    h4 {
+      margin-bottom: 2.4rem;
+    }
+    &:hover {
+      background-color: $color-orange;
+    }
+    &:active {
+      h4 {
+        color: $color-light;
+      }
+      color: $color-light;
+      background-color: $color-primary;
+    }
+  }
+}

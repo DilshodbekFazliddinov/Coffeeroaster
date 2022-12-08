@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  font-family: $fraunces;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  border-radius: 6px;
+  padding: 15px 3.1rem;
+  color: $color-light;
+  text-transform: none;
+
+  background-color: $color-primary;
+}
+.btn:hover {
+  background-color: #66d2cf;
+  color: $color-light;
+}
+.toogle_btn {
+  display: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  @include responsive(tablet) {
+    display: block;
+  }
+}
+button {
+  cursor: pointer;
+  border: none;
+}
